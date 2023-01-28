@@ -1,4 +1,3 @@
-
 const images = document.querySelectorAll('img');
 const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
@@ -50,6 +49,7 @@ startButton.addEventListener('click', function(){
   player2Article.innerText = '';
   activePlayer = 1;
   inputValue = input.value;
+  holdButton.disabled = true;
 });
 
 //hold button
@@ -82,7 +82,6 @@ holdButton.addEventListener('click', function(){
     player2Container.style.backgroundColor = '#F9F6F0';
   };
 
-
   if(total1 > inputValue || total2 > inputValue || total1 === inputValue || total2 === inputValue){
     holdButton.disabled = true;
     rollButton.disabled = true;
@@ -107,11 +106,13 @@ holdButton.addEventListener('click', function(){
 
   player1Current.innerText = parseInt('0');
   player2Current.innerText = parseInt('0');
+  holdButton.disabled = true;
 });
 
 
 
 const rollTwice = function(){
+  holdButton.disabled = false;
   let roll1 = Math.floor((Math.random()*6)+1);
   let roll2 = Math.floor((Math.random()*6)+1);
   console.log(roll1);
@@ -160,6 +161,7 @@ const rollTwice = function(){
     current = 0;
     player1Current.innerText = 0;
     player2Current.innerText = 0;
+    alert('You got two 6s! Your turn has ended and current score is removed!')
   };
   if (activePlayer === 1){
     player1Container.style.backgroundColor = '#F9F6F0';
