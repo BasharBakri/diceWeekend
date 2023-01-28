@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="dice.js" defer></script>
+  <link rel="stylesheet" href="dice.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="popup">
+    <h1>Dice game</h1>
+    <h2>Rules:</h2>
+    <ul>
+      <li>The game has 2 players, playing in rounds</li>
+      <li>In each turn, a player rolls 2 dice as many times as he
+        wishes.</li>
+      <li>Each result will get added to his round’s score.
+      </li>
+      <li>But if the player rolls a double six, all his current round’s score
+        gets removed.
+        </li>
+      <li>After that, it's the next player’s turn.
+      </li>
+      <li>A player can choose to ‘Hold’, which means that his
+        round’s score gets added to his global score.
+        </li>
+      <li>After that, it's the next player's turn.</li>
+      <li> <i> <b> The first player to pass the predefined score points loses.</b></li>
+      <li><i> <b>The first player to reach the predefined score exactly wins</i></b></li>
+    </ul>
+    <label for="number">Select Predefined score:<input type="number"></label>
+    <button id="start">Start!</button>
+  </div>
+  <main id="gridContainer">
+    <section class="containers" id="player1Container">
+      <h2 id="player1">Player 1</h2>
+      <h4>Total</h4>
+      <p id="player1total">0</p>
+      <article id="player1article"></article>
+      <div id="player1div" class="current" >
+        <h3 >Current</h3> <p id="player1current">0</p>
+      </div>
+  </section>
+  <section class="containers" id="btnContainer" >
+    <button id="newbtn">new Game</button>
+    <img id="img1" src="./imgs/dice-2.png" alt="">
+    <img id="img2" src="./imgs/dice-4.png" alt="">
+    <button id="rollbtn">Roll Dice</button>
+    <button id="holdbtn">Hold</button>
+  </section>
+  <section class="containers" id="player2Container">
+    <h2 id="player2">Player 2</h2>
+    <h4>Total</h4>
+    <p id="player2total">0</p>
+    <article id="player2article"></article>
+    <div id="player2div" class="current" >
+      <h3 >Current</h3>
+      <p id="player2current">0</p>
+    </div>
+  </section>
+</main>  
+</body>
+</html>
