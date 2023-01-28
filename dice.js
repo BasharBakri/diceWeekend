@@ -50,6 +50,8 @@ startButton.addEventListener('click', function(){
   activePlayer = 1;
   inputValue = input.value;
   holdButton.disabled = true;
+  img1.src = './imgs/dice-0.png'
+  img2.src = './imgs/dice-0.png'
 });
 
 //hold button
@@ -161,6 +163,7 @@ const rollTwice = function(){
     current = 0;
     player1Current.innerText = 0;
     player2Current.innerText = 0;
+    holdButton.disabled = true;
     alert('You got two 6s! Your turn has ended and current score is removed!')
   };
   if (activePlayer === 1){
